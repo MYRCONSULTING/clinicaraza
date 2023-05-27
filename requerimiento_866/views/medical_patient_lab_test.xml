@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_account_move_pet_form">
+            <field name="name">medical.patient.lab.test.invoice.form</field>
+            <field name="model">medical.patient.lab.test</field>
+            <field name="inherit_id" ref="medical_veterinary_app.medical_lab_test_request_form" />
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='owner_name']" position="after">
+                      <field name="invoice_id" readonly="0" />
+                      <field name="date_invoice"/>
+
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

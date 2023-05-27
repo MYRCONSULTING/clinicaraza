@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<odoo>
+<data>
+<record model="ir.ui.view" id="pacicentes_form">
+            <field name="name">medical.patient.conversations.form</field>
+            <field name="model">medical.patient</field>
+            <field name="inherit_id" ref="medical_veterinary_app.medical_patient_view" />
+            <field name="arch" type="xml">
+            <xpath expr="//notebook" position="after">
+                <!-- Add chatter and followers widget -->
+                <div class="oe_chatter">
+                    <!-- Followers view -->
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <!-- Chatter view -->
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </xpath>
+    </field>
+    </record>
+</data>
+</odoo>
+            
